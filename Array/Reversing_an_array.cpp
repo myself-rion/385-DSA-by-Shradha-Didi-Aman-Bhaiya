@@ -1,5 +1,6 @@
 // copying the string into another string into reverse order
 
+
 string reverseWord(string str)
 {
     string it1;
