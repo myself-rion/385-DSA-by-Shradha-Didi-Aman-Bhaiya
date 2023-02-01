@@ -1,4 +1,4 @@
-Class Solution : {
+class Solution {
     public :
         long long int merge(vector<long long> & nums, long long low, long long mid, long long high){
             long long count = 0, k = 0;
