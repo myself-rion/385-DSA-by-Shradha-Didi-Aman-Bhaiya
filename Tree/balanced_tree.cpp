@@ -1,5 +1,6 @@
 class Solution
 {
+    // pair<int,int> {balanced or not, height}
 private:
     pair<bool, int> isBalancedFast(Node *root)
     {
@@ -7,13 +8,13 @@ private:
         {
             return {true, 0};
         }
-
-        pair<bool, int> left = isBalancedFast(root->left);
-        pair<bool, int> right = isBalancedFast(root->right);
-        bool diff = abs(left.second - right.second) <= 1;
+        // checking for every node
+        pair<bool, int> left = isBalancedFast(root->left); //checking if left subtree is balanced
+        pair<bool, int> right = isBalancedFast(root->right); // checking if right subtree is balanced
+        bool diff = abs(left.second - right.second) <= 1; //difference btwn left subtree height & right subtree height
         pair<bool, int> ans;
-        ans.second = max(left.second, right.second) + 1;
-        if (left.first && right.first && diff)
+        ans.second = max(left.second, right.second) + 1; //height
+        if (left.first && right.first && diff) // all 3 conditions are true
         {
             ans.first = true;
         }
