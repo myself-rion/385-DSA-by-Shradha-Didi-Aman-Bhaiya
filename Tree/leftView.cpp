@@ -10,7 +10,7 @@ void solve(vector<int> &a , Node* root, int lvl){
         solve(a,root->right,lvl+1);
         
     }
-    vector<int> rightView(Node *root)
+    vector<int> leftView(Node *root)
     {
        vector<int> ans;
        solve(ans,root,0);
