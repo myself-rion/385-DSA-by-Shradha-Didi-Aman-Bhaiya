@@ -11,7 +11,8 @@ public:
         {
             curr = curr->next;
         }
-        if (!curr)
+
+        if (!curr) //if curr is null means the first node needs to be deleted
             return head->next;
 
         while (curr->next != NULL)
